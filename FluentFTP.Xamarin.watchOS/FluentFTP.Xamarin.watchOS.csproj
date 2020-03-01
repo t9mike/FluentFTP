@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0491DAE-32FD-4FAA-9298-B2116C4AC20E}</ProjectGuid>
+    <ProjectTypeGuids>{FC940695-DFE0-4552-9F25-99AF4A5619A1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FluentFTP.Xamarin.watchOS</RootNamespace>
+    <AssemblyName>FluentFTP.Xamarin.watchOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>__WATCHOS__;__MOBILE__;__UNIFIED__;DEBUG;CORE;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>54385</IOSDebuggerPort>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchVerbosity></MtouchVerbosity>
+    <MtouchLink></MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>__WATCHOS__;__MOBILE__;__UNIFIED__;CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <MtouchVerbosity></MtouchVerbosity>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.WatchOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\FluentFTP\Utils\FtpReflection.cs">
+      <Link>Utils\FtpReflection.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Utils\FtpExtensions.cs">
+      <Link>Utils\FtpExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Utils\NET2Compatibility.cs">
+      <Link>Utils\NET2Compatibility.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Stream\FtpDataStream.cs">
+      <Link>Stream\FtpDataStream.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Stream\FtpSslStream.cs">
+      <Link>Stream\FtpSslStream.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Stream\FtpSocketStream.cs">
+      <Link>Stream\FtpSocketStream.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Servers\FtpServerSpecificHandler.cs">
+      <Link>Servers\FtpServerSpecificHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Servers\FtpServerStrings.cs">
+      <Link>Servers\FtpServerStrings.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Rules\FtpFolderNameRule.cs">
+      <Link>Rules\FtpFolderNameRule.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Rules\FtpFileNameRule.cs">
+      <Link>Rules\FtpFileNameRule.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Rules\FtpFileExtensionRule.cs">
+      <Link>Rules\FtpFileExtensionRule.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Rules\FtpSizeRule.cs">
+      <Link>Rules\FtpSizeRule.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Rules\FtpFolderNameRegexRule.cs">
+      <Link>Rules\FtpFolderNameRegexRule.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Rules\FtpFIleNameRegexRule.cs">
+      <Link>Rules\FtpFIleNameRegexRule.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Rules\FtpRule.cs">
+      <Link>Rules\FtpRule.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Proxy\FtpClientProxy.cs">
+      <Link>Proxy\FtpClientProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Proxy\FtpClientUserAtHostProxy.cs">
+      <Link>Proxy\FtpClientUserAtHostProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Proxy\FtpClientBlueCoatProxy.cs">
+      <Link>Proxy\FtpClientBlueCoatProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Proxy\FtpClientHttp11Proxy.cs">
+      <Link>Proxy\FtpClientHttp11Proxy.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Proxy\ProxyInfo.cs">
+      <Link>Proxy\ProxyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\IntRef.cs">
+      <Link>Helpers\IntRef.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpHashAlgorithms.cs">
+      <Link>Helpers\FtpHashAlgorithms.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpListParser.cs">
+      <Link>Helpers\FtpListParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpTrace.cs">
+      <Link>Helpers\FtpTrace.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpResult.cs">
+      <Link>Helpers\FtpResult.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpProfile.cs">
+      <Link>Helpers\FtpProfile.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpSizeReply.cs">
+      <Link>Helpers\FtpSizeReply.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpProgress.cs">
+      <Link>Helpers\FtpProgress.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpReply.cs">
+      <Link>Helpers\FtpReply.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpFxpSession.cs">
+      <Link>Helpers\FtpFxpSession.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpEvents.cs">
+      <Link>Helpers\FtpEvents.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpListItem.cs">
+      <Link>Helpers\FtpListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpOperators.cs">
+      <Link>Helpers\FtpOperators.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\FtpHash.cs">
+      <Link>Helpers\FtpHash.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\Parsers\FtpIBMParser.cs">
+      <Link>Helpers\Parsers\FtpIBMParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\Parsers\FtpVMSParser.cs">
+      <Link>Helpers\Parsers\FtpVMSParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\Parsers\FtpNonStopParser.cs">
+      <Link>Helpers\Parsers\FtpNonStopParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\Parsers\FtpMachineListParser.cs">
+      <Link>Helpers\Parsers\FtpMachineListParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\Parsers\FtpWindowsParser.cs">
+      <Link>Helpers\Parsers\FtpWindowsParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\Parsers\FtpUnixParser.cs">
+      <Link>Helpers\Parsers\FtpUnixParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Helpers\Hashing\CRC32.cs">
+      <Link>Helpers\Hashing\CRC32.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Exceptions\FtpMissingSocketException.cs">
+      <Link>Exceptions\FtpMissingSocketException.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Exceptions\FtpException.cs">
+      <Link>Exceptions\FtpException.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Exceptions\FtpAuthenticationException.cs">
+      <Link>Exceptions\FtpAuthenticationException.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Exceptions\FtpListParseException.cs">
+      <Link>Exceptions\FtpListParseException.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Exceptions\FtpSecurityNotAvailableException.cs">
+      <Link>Exceptions\FtpSecurityNotAvailableException.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Exceptions\FtpCommandException.cs">
+      <Link>Exceptions\FtpCommandException.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpTraceLevel.cs">
+      <Link>Enums\FtpTraceLevel.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpEncryptionMode.cs">
+      <Link>Enums\FtpEncryptionMode.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpIpVersion.cs">
+      <Link>Enums\FtpIpVersion.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpVerify.cs">
+      <Link>Enums\FtpVerify.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpDataConnectionType.cs">
+      <Link>Enums\FtpDataConnectionType.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpStatus.cs">
+      <Link>Enums\FtpStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpPermission.cs">
+      <Link>Enums\FtpPermission.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpsBuffering.cs">
+      <Link>Enums\FtpsBuffering.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpRemoteExists.cs">
+      <Link>Enums\FtpRemoteExists.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpResponseType.cs">
+      <Link>Enums\FtpResponseType.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpParser.cs">
+      <Link>Enums\FtpParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpDataType.cs">
+      <Link>Enums\FtpDataType.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpError.cs">
+      <Link>Enums\FtpError.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpHashAlgorithm.cs">
+      <Link>Enums\FtpHashAlgorithm.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpCapability.cs">
+      <Link>Enums\FtpCapability.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpListOption.cs">
+      <Link>Enums\FtpListOption.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpOperatingSystem.cs">
+      <Link>Enums\FtpOperatingSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpDate.cs">
+      <Link>Enums\FtpDate.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpLocalExists.cs">
+      <Link>Enums\FtpLocalExists.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpFolderSyncMode.cs">
+      <Link>Enums\FtpFolderSyncMode.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpOperator.cs">
+      <Link>Enums\FtpOperator.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpFileSystemObjectType.cs">
+      <Link>Enums\FtpFileSystemObjectType.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpServer.cs">
+      <Link>Enums\FtpServer.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpFileSystemObjectSubType.cs">
+      <Link>Enums\FtpFileSystemObjectSubType.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Enums\FtpSpecialPermissions.cs">
+      <Link>Enums\FtpSpecialPermissions.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FileDownload.cs">
+      <Link>Client\FtpClient_FileDownload.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FXPConnection.cs">
+      <Link>Client\FtpClient_FXPConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FileManagement.cs">
+      <Link>Client\FtpClient_FileManagement.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FileVerification.cs">
+      <Link>Client\FtpClient_FileVerification.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_Stream.cs">
+      <Link>Client\FtpClient_Stream.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_Connection.cs">
+      <Link>Client\FtpClient_Connection.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\IFtpClient.cs">
+      <Link>Client\IFtpClient.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FolderUpload.cs">
+      <Link>Client\FtpClient_FolderUpload.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FolderDownload.cs">
+      <Link>Client\FtpClient_FolderDownload.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FolderManagement.cs">
+      <Link>Client\FtpClient_FolderManagement.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_Static.cs">
+      <Link>Client\FtpClient_Static.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FilePermissions.cs">
+      <Link>Client\FtpClient_FilePermissions.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FileProperties.cs">
+      <Link>Client\FtpClient_FileProperties.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FileUpload.cs">
+      <Link>Client\FtpClient_FileUpload.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FolderTransfer.cs">
+      <Link>Client\FtpClient_FolderTransfer.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_Hash.cs">
+      <Link>Client\FtpClient_Hash.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_Listing.cs">
+      <Link>Client\FtpClient_Listing.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_FileTransfer.cs">
+      <Link>Client\FtpClient_FileTransfer.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_Utils.cs">
+      <Link>Client\FtpClient_Utils.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_Properties.cs">
+      <Link>Client\FtpClient_Properties.cs</Link>
+    </Compile>
+    <Compile Include="..\FluentFTP\Client\FtpClient_AutoConnection.cs">
+      <Link>Client\FtpClient_AutoConnection.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\WatchOS\Xamarin.WatchOS.CSharp.targets" />
+</Project>
